@@ -1,0 +1,456 @@
+<!-- --------------------- Main ---------------------- -->
+<main>
+   <div class="container">
+      <!-- ========================= Left ===================== -->
+      <div class="left">
+         <a class="profile">
+            <div class="profile-photo">
+               <img src="./images/kiritoG.jpg">
+            </div>
+            <div class="handdle">
+               <h4>KietCao</h4>
+               <p class="text-muted">Cao Kiet</p>
+            </div>
+         </a>
+
+         <!-- ------------------- Sidebar -------------------------- -->
+         <div class="sidebar media">
+            <a class="menu-item active">
+               <span><i class="uil uil-home"></i></span>
+               <h3>Home</h3>
+            </a>
+            <a class="menu-item">
+               <span><i class="uil uil-compass"></i></span>
+               <h3>Explore</h3>
+
+               <div class="explores-popup">
+                  <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991975.6715146767!2d107.62934004134141!3d13.784602089207612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316c1f82022f81a3%3A0x8c52b5f68143b50d!2zR2lhIExhaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1639541992597!5m2!1svi!2s"
+                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+               </div>
+
+            </a>
+            <a class="menu-item" id="notifications">
+               <span><i class="uil uil-bell"><small class="notification-count">9+</small></i></span>
+               <h3>Notifications</h3>
+               <!-- ---------------------- Notification popup ---------------------------- -->
+               <div class="notifications-popup">
+                  <div>
+                     <div class="profile-photo">
+                        <img
+                           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTdVHm_Yd1lvAEHYE0ZLha6ThfTMXCJ69BWg&usqp=CAU">
+                     </div>
+                     <div class="notification-body">
+                        <b>Kiet Cao</b> accepted your friend request
+                        <small class="text-muted">2 DAY AGO</small>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="profile-photo">
+                        <img
+                           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkmshMkOisTvhrfbKgjMlP3aZr1mXqjOHEfw&usqp=CAU">
+                     </div>
+                     <div class="notification-body">
+                        <b>Kiet Cao</b> commented on your post
+                        <small class="text-muted">3 DAY AGO</small>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="profile-photo">
+                        <img
+                           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdPL1jN_N38NU8vDmgbriqwmbJQX6A8JxLg&usqp=CAU">
+                     </div>
+                     <div class="notification-body">
+                        <b>Kiet Cao</b> accepted your friend request
+                        <small class="text-muted">4 DAY AGO</small>
+                     </div>
+                  </div>
+               </div>
+               <!-- ----------------------- End Notification -------------------------->
+            </a>
+            <a class="menu-item">
+               <span><i class="uil uil-envelope-alt" id="messages-notifications"><small
+                        class="notification-count">6</small></i></span>
+               <h3>Messages</h3>
+            </a>
+            <a class="menu-item">
+               <span><i class="uil uil-bookmark"></i></span>
+               <h3>Bookmarks</h3>
+            </a>
+            <a class="menu-item">
+               <span><i class="uil uil-chart-line"></i></span>
+               <h3>Analytics</h3>
+            </a>
+            <a class="menu-item">
+               <span><i class="uil uil-palette"></i></span>
+               <h3>Themes</h3>
+            </a>
+            <a class="menu-item">
+               <span><i class="uil uil-setting"></i></span>
+               <h3>Settings</h3>
+            </a>
+         </div>
+         <!-- --------------------------- End of SideBar -------------------- -->
+         <!-- <label for="create-post" class="btn btn-primary">Create post</label> -->
+      </div>
+      <!--=============================== End of Left ==================================== -->
+
+
+
+
+      <!-- ========================= Middle =================== -->
+      <div class="middle">
+         <!-- ------------------------- Stories ----------------------- -->
+         <div class="stories">
+
+            {{#each stories}}
+            <div class="story">
+               <div class="profile-photo">
+                  <img src= {{this.src}}>
+               </div>
+               <p class="name">{{this.p}}</p>
+            </div>
+            {{/each}}
+         </div>
+         <!-- ------------------------- End Of Stories ----------------------- -->
+
+         <!-- ------------------------------- Create Post -------------------------- -->
+         <div class="create-post">
+            <div class="profile-photo">
+               <img src="images/kiritoG.jpg">
+            </div>
+            <div class="para">
+               <p>What's on your mind KietCao.</p>
+            </div>
+            <div class="your-post">
+               <div class="card">
+                  <div class="heading-card">
+                     <div>&emsp;&emsp;</div>
+                     <div>
+                        <h2>Your stories</h2>
+                        <p class="text-muted">Create posts</p>
+                     </div>
+                     <div class="close-btn">
+                        <h1 class="uil uil-times-circle"></h1>
+                     </div>
+                  </div>
+
+                  <div>
+                     <div class="para1">
+                        <div class="profile-photo">
+                           <img src="images/kiritoG.jpg">
+                        </div>
+                        <div class="sub-heading">
+                           <h4>KietCaoc3a</h4>
+                           <p class="text-muted">@Cao Kiet</p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="overflowImg">
+                     <div class="textArea">
+                        <textarea class="text-area" rows="7"
+                           placeholder="What's on your mind KietCaoc3a?"></textarea>
+                     </div>
+                     <label for="file-input">
+                        <div class="images-preview">
+                           <img alt="Image Preview" class="image-input">
+                           <div class="close-btn">
+                              <h1 class="uil uil-times"></h1>
+                           </div>
+                           <input type="file" id="file-input" style="display: none; visibility: none;">
+                           <div class="img-head">
+                              <h1 class="uil uil-image-upload" id="icon1"></h1>
+                              <span id="image-preview-default1">Adding images/videos</span>
+                              <span id="image-preview-default2">or drag and drop</span>
+                           </div>
+                        </div>
+                     </label>
+                  </div>
+
+                  <div class="add-post">
+                     <h3 class="">Add to your post</h3>
+                     <div class="icon-input">
+                        <!-- <label for="file-input"> -->
+                        <h1 class="uil uil-images iconInput1"></h1>
+                        <!-- </label> -->
+                        <h1 class="uil uil-video"></h1>
+                     </div>
+
+                  </div>
+
+                  <div class="push-post">
+                     <!-- <label class="btn btn-primary">Post</label> -->
+                     <button class="disableHover btn btn-primary">Post</button>
+                  </div>
+
+                  <div class="error">
+                     <p>Looks like this post has no content. Please write something or attach a link or image to
+                        post.</p>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+         <!-- ------------------------------------- Create Feedbacks ------------------------------ -->
+         <div class="feeds">
+            {{#each feedbacks}}
+               <div class="feed">
+                  <div class="head">
+                     <div class="user">
+                        <div class="profile-photo">
+                           <img src= {{this.src.[0]}}>
+                        </div>
+                        <div class="ingo">
+                           <h3>{{this.h3}}</h3>
+                           <small>{{this.small}}</small>
+                        </div>
+                     </div>
+
+                     <span class="edit">
+                        <i class="uil uil-ellipsis-h"></i>
+                     </span>
+                  </div>
+
+                  {{#if this.caption}}
+                     <div class="caption">
+                        <p>{{this.caption}}</p>
+                     </div>
+                  {{/if}}
+
+                  {{#if this.src.[1]}}
+                  <div class="photo">
+                     <img src= {{this.src.[1]}}>
+                  </div>
+                  {{/if}}
+
+                  <div class="action-button">
+                     <div class="interation-buttons">
+                        <span><i class="uil uil-heart"></i></span>
+                        <span><i class="uil uil-comment-dots"></i></span>
+                        <span><i class="uil uil-share-alt"></i></span>
+                     </div>
+
+                     <div class="bookmark">
+                        <span><i class="uil uil-bookmark-full"></i></span>
+                     </div>
+                  </div>
+
+                  <div class="liked-by">
+
+                     {{#if this.src.[2]}}
+                        <span><img src= {{this.src.[2]}}> </span>
+                     {{/if}}
+
+                     {{#if this.src.[3]}}
+                        <span><img src={{this.src.[3]}}> </span>
+                     {{/if}}
+
+                     {{#if this.src.[4]}}
+                        <span><img src={{this.src.[4]}}> </span>
+                     {{/if}}
+
+                     <p><b>{{this.b.[0]}}</b>{{#if this.status}} and {{/if}}<b>{{this.b.[1]}}</b></p>
+                     
+                  </div>
+
+                  <div class="like-comment-share">
+                     <div class="common like">
+                        <div class="likeHeading">
+                           <i class="uil uil-thumbs-up"></i>
+                           <span>Like</span>
+                        </div>
+                        <div class="animation-like">
+                           <span><span class="emojis">Like</span><i class="fas fa-thumbs-up"></i></span>
+                           <span><span class="emojis">Love</span><i class="fas fa-heart"></i></span>
+                           <span><span class="emojis">Haha</span><i class="fas fa-laugh-squint"></i></span>
+                           <span><span class="emojis">Wow</span><i class="fas fa-surprise"></i></span>
+                           <span><span class="emojis">Sad</span><i class="fas fa-sad-tear"></i></span>
+                           <span><span class="emojis">Angry</span><i class="fas fa-angry"></i></span>
+                        </div>
+                     </div>
+
+                     <div class="common comment">
+                        <i class="uil uil-comment-alt"></i>
+                        <span>Comment</span>
+                     </div>
+                     <div class="common share">
+                        <i class="uil uil-share"></i>
+                        <span>Share</span>
+                     </div>
+                  </div>
+
+                  <div class="comment-popup">
+                  {{#each this.commentPopup}}
+                     <div class="commentAdding">
+                        <div class="profile-photo">
+                           <img src="./images/kiritoG.jpg">
+                        </div>
+                        <div class="comment-text">
+                           <h4>Cao Kiet</h4>
+                           {{!-- Not to escapes HTML using {{{}}} --}}
+                           <p class="edit-text-comment">{{{this}}}</p>
+                           {{!-- Not to escapes HTML using {{{}}} --}}
+                        </div>
+                        <div class="emoji-comment">
+                           <div class="edit-delete-center">
+                              <div class="edit-delete">
+                                 <div class="emoji-common edit-comment">
+                                    <i class="uil uil-pen"></i><span>Edit</span>
+                                 </div>
+                                 <div class="emoji-common delete-comment">
+                                    <i class="uil uil-trash-alt"></i><span>Delete</span>
+                                 </div>
+                              </div>
+                              <span class="span"><i class="uil uil-ellipsis-h"></i></span>
+                           </div>
+                        </div>
+                     </div>
+                  {{/each}}
+                  </div>
+
+                  <div class="COMMENT">
+                     <div class="profile-photo">
+                        <img src="./images/kiritoG.jpg">
+                     </div>
+                     <textarea type="text" class="write-comment" rows="1"
+                        placeholder="Write your comment...."></textarea>
+                  </div>
+               </div>
+            {{/each}}
+
+         </div>
+         <!-- ----------------------------------------- End Feeds ------------------------------------- -->
+      </div>
+
+      <!-- ======================================== End Of Middle ===================================== -->
+
+      <!-- ========================= Right ==================== -->
+      <div class="right media">
+
+         <!-- --------------------------- Messages --------------------------------- -->
+         <div class="messages messages-popup">
+            <div class="heading">
+               <h4>Messages</h4><i class="uil uil-edit"></i>
+            </div>
+
+            <!-- ----------------------- Search Bar ------------------ -->
+            <div class="search-bar">
+               <i class="uil uil-search"></i>
+               <input type="search" placeholder="Search messages" id="message-search">
+            </div>
+            <!-- ---------------------------- End of Search Bar ----------------------- -->
+
+            <!-- ------------------------ Messages Category --------------------- -->
+            <div class="category">
+               <h6 class="active">Primary</h6>
+               <h6>General</h6>
+               <h6>Requests</h6>
+            </div>
+            <!-- ------------------------ End Messages Category --------------------- -->
+
+            <!-- ----------------------------- Message ------------------- -->
+            {{#each requests}}
+            <div class="message">
+               <div class="profile-photo">
+                  <img src={{this.src}} alt="">
+                  <div class="active"></div>
+               </div>
+
+               <div class="message-body">
+                  <h5>{{this.h5}}</h5>
+                  <p class="text-muted">{{this.p}}</p>
+               </div>
+            </div>
+            {{/each}}
+            <!-- ----------------------------- End Message ------------------- -->
+
+            <!-- ---------------------------------- Friend Requests --------------------------------- -->
+            <div class="friend-requests">
+               {{#each requestFriends}}
+               <div class="request">
+                  <div class="info">
+                     <div class="profile-photo">
+                        <img src= {{this.src}}>
+                     </div>
+                     <div class="requestInfo">
+                        <h5>{{this.h5}}</h5>
+                        <p class="text-muted">{{this.p}}</p>
+                     </div>
+                  </div>
+                  <div class="action">
+                     <button class="btn btn-primary">Accept</button>
+                     <button class="btn">Decline</button>
+                  </div>
+               </div>
+               {{/each}}
+            </div>
+            <!-- ---------------------------------- End Friend Requests --------------------------------- -->
+         </div>
+         <!-- --------------------------- End Messages --------------------------------- -->
+
+      </div>
+      <!-- ============================================ End of Right ========================================= -->
+   </div>
+</main>
+
+<!-- ========================================= Theme Customization =========================================== -->
+<div class="customize-theme config">
+   <div class="card move">
+      <h2>Customize your view</h2>
+      <p class="text-muted">Manage your font size, color, and background.</p>
+
+      <!-- ---------------------- Font Sizes --------------------- -->
+      <div class="font-size">
+         <h4>Font Size</h4>
+         <div>
+            <h6>Aa</h6>
+            <div class="choose-size">
+               <span></span>
+               <span></span>
+               <span class="active"></span>
+               <span></span>
+               <span></span>
+            </div>
+            <h3>Aa</h3>
+         </div>
+      </div>
+      <!-- ---------------------- End Of Font Sizes --------------------- -->
+
+      <!-- --------------------------- Primary Colors ------------------------- -->
+      <div class="color">
+         <h4>Color</h4>
+         <div class="choose-color">
+            <span class="color-1 active"></span>
+            <span class="color-2"></span>
+            <span class="color-3"></span>
+            <span class="color-4"></span>
+            <span class="color-5"></span>
+         </div>
+      </div>
+      <!-- --------------------------- End Of Primary Colors ------------------------- -->
+
+      <!-- -------------------------------- Background Colors ----------------------------- -->
+      <div class="background">
+         <h4>Background</h4>
+         <div class="choose-bg">
+            <div class="bg-1 active">
+               <span></span>
+               <h5 for="bg-1">Light</h5>
+            </div>
+
+            <div class="bg-2">
+               <span></span>
+               <h5>Dim</h5>
+            </div>
+
+            <div class="bg-3">
+               <span></span>
+               <h5 for="bg-3">LightOut</h5>
+            </div>
+         </div>
+      </div>
+      <!-- -------------------------------- End Of Background Colors ----------------------------- -->
+   </div>
+</div>

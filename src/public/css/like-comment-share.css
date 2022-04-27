@@ -1,0 +1,244 @@
+.like-comment-share{
+   display: flex;
+   font-size: 1rem;
+   padding: .3rem 0;
+   margin-top: 1rem;
+   border-top: 1px solid var(--color-gray);
+   box-sizing: border-box;
+   text-align: center;
+   position: relative;
+}
+
+.like-comment-share .common{
+   width: 100%;
+   transition: 0.05s ease-in;
+}
+
+.like-comment-share .common i{
+   font-size: 1rem;
+}
+
+.like-comment-share .common:hover{
+   background: var(--color-light);
+   cursor: pointer;
+}
+
+.like-comment-share .common .likeHeading:active{
+   transform: scale(0.9);
+}
+
+.like-comment-share .common.comment:active{
+   transform: scale(0.9);
+}
+
+/* .COMMENT span{ */
+/*    font-size: 25px; */
+/*    height: 100%; */
+/*    width: 7.5%; */
+/*    text-align: center; */
+/*    box-sizing: border-box; */
+/* } */
+
+/* .COMMENT span:hover{ */
+/*    opacity: 0.5; */
+/*    cursor: pointer; */
+/*    border-radius: 50%; */
+/* } */
+
+.like-comment-share .animation-like{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   /* font-size: 3em; */
+   position: absolute;
+   top: -2.6rem;
+   border-radius: 45px;
+   width: 25em;
+   height: 5em;
+   background-color: var(--color-white);
+   gap: .15em;
+   padding: 0 1em 0 1em;
+   box-shadow: 0 0 1rem var(--color-primary);
+   transition: transform 0.5s ease-in-out;
+   visibility: hidden;
+}
+
+.like-comment-share .animation-like .emojis{
+   position: absolute;
+   font-size: 1.1em;
+   top: -1.2em;
+   margin-right: .2em;
+   border-radius: 15px;
+   width: 3.35em;
+   background-color: var(--color-light);
+   visibility: hidden;
+}
+
+.like-comment-share .like .animation-like.animateLIKE{
+   transform: translateY(-35px);
+   visibility: visible;
+}
+
+.like-comment-share .animation-like span i:hover{
+   animation: 1s infinite alternate myAnimate;
+}
+
+.like-comment-share .animation-like span i{
+   border-radius: 50%;
+   width: 1.5em;
+   height: 1.5em;
+   padding: .25em;
+   color: white;
+   font-size: 2.2rem;
+}
+
+.animation-like span:first-child i{
+   background-color: #0088ff;
+}
+
+.animation-like span:nth-child(2) i{
+   background-color: #ff243a;
+}
+
+.animation-like span:nth-child(3) i{
+   background-color: #F4F55B;
+}
+
+.animation-like span:nth-child(4) i{
+   background-color: #ffe24f;
+}
+
+.animation-like span:nth-child(5) i{
+   background-color: #f200ff;
+}
+
+
+.animation-like span:last-child i{
+   background-color:#ff4d00;
+}
+
+
+@keyframes myAnimate{
+   from{
+      transform: scale(1.2) rotate(20deg);
+   }
+   to{
+      transform: scale(1.2) rotate(-40deg);
+   }
+}
+
+/* ========================== Comment ======================= */
+.COMMENT{
+   display: flex;
+   margin-top: .7rem;
+   display: none;
+}
+
+.COMMENT .profile-photo{
+   height: 2.5rem;
+   width: 2.9rem;
+}
+
+.COMMENT textarea{
+   border-radius: var(--border-radius);
+   background-color: var(--color-light);
+   font-size: 1.1rem;
+   width: 100%;
+   margin-left: .9rem;
+   margin-right: .9rem;
+   padding: .5rem .9rem .5rem .9rem;
+   box-sizing: border-box;
+   resize: none;
+   overflow: hidden;
+   color: var(--color-dark);
+}
+
+
+.commentAdding{
+   display: flex;
+   font-size: 1.5em;
+   color: var(--color-dark);
+   margin-top: 1em;
+   position: relative;
+}
+
+.commentAdding .comment-text{
+   background-color: var(--color-light);
+   border-radius: 10px;
+   height: auto;
+   max-width: 30em;
+   margin: 0 1em;
+   padding: 0 .5em;
+   overflow-wrap: anywhere;
+}
+
+.commentAdding .emoji-comment span{
+   align-self: center;
+   width: 100%;
+}
+
+.commentAdding .profile-photo{
+   max-height: 2em;
+   min-width: 1.8em;
+}
+
+.commentAdding .emoji-comment{
+   position: relative;
+   display: flex;
+   width: 2em;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.commentAdding .emoji-comment .edit-delete-center{
+   position: relative;
+   width: 100%;
+}
+
+.commentAdding .emoji-comment .edit-delete-center .span{
+   position: relative;
+   z-index: 1;
+}
+
+.commentAdding .emoji-comment .edit-delete-center .span:hover{
+   cursor: pointer;
+   background: var(--color-light);
+   border-radius: 50%;
+   width: 100%;
+   height: 100%;
+}
+
+.commentAdding .emoji-comment .edit-delete{
+   display: none;
+   position: absolute;
+   width: 13em;
+   left: -11em;
+   bottom: -5.5em;
+   background: var(--color-white);
+   border-radius: var(--card-border-radius);
+   padding: var(--card-padding);
+   box-shadow: 0 0 .8em var(--color-primary);
+   z-index: 10;
+}
+
+.commentAdding .emoji-comment .edit-delete::before{
+   content: "";
+   position: absolute;
+   right: .8em;
+   top: -.5em;
+   width: 1.2em;
+   height: 1.2em;
+   transform: rotate(45deg);
+   background: var(--color-white);
+}
+
+.commentAdding .emoji-comment .edit-delete .emoji-common span{
+   margin-left: .5em;
+   font-size: 1em;
+}
+
+.commentAdding .emoji-comment .edit-delete .emoji-common:hover{
+   background-color: var(--color-light);
+   border-radius: .5em;
+   cursor: pointer;
+}

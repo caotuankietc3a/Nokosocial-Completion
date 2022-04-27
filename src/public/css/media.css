@@ -1,0 +1,224 @@
+/* ========= Media Queries For Big Tablets and Small Mobile ============== */
+@media screen and (max-width: 1150px){
+   .container{
+      width: 96%;
+   }
+
+   main .container{
+      grid-template-columns: 5rem auto 30vw;
+      gap: 1rem;
+   }
+
+   .left{
+      width: 5rem;
+      z-index: 5;
+   }
+
+   main .container .left .profile{
+      display: none;
+      
+   }
+
+   .left .sidebar.media{
+      margin-top: 5rem;
+   }
+
+   .sidebar h3{
+      display: none;
+   }
+
+   .left .btn{
+      display: none;
+   }
+
+   .sidebar .notifications-popup .profile-photo{
+      width: 2rem;
+      height: 2rem;
+   }
+
+   .sidebar .notifications-popup .notification-body{
+      font-size: .6rem;
+   }
+
+   .sidebar .notifications-popup .notification-body small{
+      font-size: .5rem;
+   }
+
+   main .container .right.media.movein{
+      animation: slideInFromLeft 0.01ms ease-in;
+      top: 4.8rem;
+      right: 6rem;
+   }
+
+   .middle .feeds .feed{
+      transform: none;
+   }
+}
+
+@media screen and (max-width: 1680px){
+   nav .search-bar{
+      display: none;
+   }
+
+   main .container{
+      grid-template-columns: 0 auto 5rem;
+      gap: 0;
+   }
+
+   main .container .left{
+      grid-column: 3/4;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+   }
+
+   /* ---------- Notification PopUp ---------------- */
+   .left .notifications-popup{
+      position: absolute;
+      left: -20.5rem;
+      width: 20rem;
+   }
+
+   .left .notifications-popup::before{
+      display: absolute;
+      top: 1rem;
+      left: calc(20rem - 0.6rem);
+      display: block;
+   }
+
+   .sidebar .notifications-popup .profile-photo{
+      width: 2rem;
+      height: 2rem;
+   }
+
+   .sidebar .notifications-popup .notification-body{
+      font-size: .6rem;
+   }
+
+   .sidebar .notifications-popup .notification-body small{
+      font-size: .5rem;
+   }
+
+   .left .explores-popup{
+      position: absolute;
+      left: -27.5rem;
+      width: 26.9rem;
+      height: 27rem;
+      right: 0;
+   }
+   
+   .left .explores-popup iframe{
+      position: absolute;
+      width: 25rem;
+      height: 25rem;
+   }
+
+   .left .explores-popup::before{
+      top: 1rem;
+      left: calc(40rem - 14rem);
+      display: block;
+   }
+
+   main .container .middle{
+      grid-column: 1/3;
+   }
+
+   main .container .right{
+      position: absolute;
+      position: fixed;
+      width: 25rem;
+      right: -30rem;
+      z-index: 200;
+      transition: 1s ease-out;
+   }
+
+   main .container .right.movein{
+      animation: slideInFromLeft 0.01ms ease-in;
+      top: 5.2rem;
+      right: 13rem;
+   }
+
+   main .container .right::before {
+      content: "";
+      position: absolute;
+      width: 1.4rem;
+      height: 1.4rem;
+      top: 19rem;
+      right: -0.7rem;
+      display: block;
+      transform: rotate(45deg);
+      background: var(--color-white);
+   }
+
+   .customize-theme .background{
+      margin-top: 2rem;
+   }
+
+   .customize-theme .choose-bg{
+      display: grid;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+   }
+
+   .middle .create-post .your-post .card{
+      width: 60%;
+   }
+
+   .like-comment-share .common.like:hover,
+   .like-comment-share .common.comment:hover,
+   .like-comment-share .common.share:hover{
+      background: none;
+   }
+}
+
+@media screen and (max-width: 620px) {
+   body{
+      width: 10%;
+   }
+}
+
+@keyframes slideInFromLeft{
+  0%{
+    transform:  translateX(100%);
+  }
+  100%{
+    transform:  translateX(0);
+  }
+}
+
+@keyframes slideInFromRight{
+  0%{
+    transform:  translateX(-100%);
+  }
+  100%{
+    transform:  translateX(0);
+  }
+}
+
+@keyframes slideInFromTop{
+  0%{
+    transform:  translateY(-100%);
+  }
+  100%{
+    transform:  translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom{
+  0%{
+    transform:  translateY(100%);
+  }
+  100%{
+    transform:  translateY(0);
+  }
+}
+
+@keyframes slideOutToBottom{
+  0%{
+    transform:  translateY(0);
+  }
+  100%{
+     transform:  translateY(100%);
+  }
+}
